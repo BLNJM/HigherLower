@@ -1,5 +1,9 @@
 public class Main{
 
+    // global values for game numbers
+    private int playerNum;
+    private int cpuNum;
+
     /**
      *
      * @param args
