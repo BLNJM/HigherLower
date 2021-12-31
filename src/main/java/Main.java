@@ -6,7 +6,7 @@ public class Main{
 
     /**
      *
-     * @param args
+     * @param args none
      */
     public static void main(String[] args) {
         System.out.println("Enter a number from 1-10:");
@@ -14,7 +14,7 @@ public class Main{
 
     /**
      * Method to generate a number
-     * @return
+     * @return generated integer
      */
     private int generateNum() {
         return 0;
