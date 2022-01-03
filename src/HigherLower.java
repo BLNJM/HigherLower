@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main{
+public class HigherLower{
 
     /**
      *
@@ -16,11 +16,14 @@ public class Main{
             System.out.println("Number is " + firstNum + ", will the next number be higher or lower? (numbers range from 1-20)");
 
             String answer = scanner.next();
-            while (!answer.equalsIgnoreCase("higher") && !answer.equalsIgnoreCase("lower")) {
+            if (!answer.equalsIgnoreCase("higher") && !answer.equalsIgnoreCase("lower")) {
                 System.out.println("invalid response, try again");
             }
+            else {
+                int secondNum = generateNum();
+            }
 
-            int secondNum = generateNum();
+            break;
 
             //if (answer.equalsIgnoreCase("higher") && ) {}
         }
