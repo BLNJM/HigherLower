@@ -8,7 +8,6 @@ public class HigherLower{
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        boolean play = true;
 
         int firstNum = generateNum();
 
