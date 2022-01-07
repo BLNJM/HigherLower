@@ -7,13 +7,13 @@ public class HigherLower{
      * @param args none
      */
     public static void main(String[] args) {
+        // generate necessary variables
         Scanner scanner = new Scanner(System.in);
         String answer = "";
-
         int firstNum = generateNum();
 
+        // get user input for answer
         System.out.println("Number is " + firstNum + ", will the next number be higher or lower? (numbers range from 1-20):");
-
         while (!answer.equalsIgnoreCase("higher") && !answer.equalsIgnoreCase("lower")) {
             answer = scanner.next();
             if (!answer.equalsIgnoreCase("higher") && !answer.equalsIgnoreCase("lower")) {
@@ -21,9 +21,37 @@ public class HigherLower{
             }
         }
 
-        System.out.println("valid response");
-        //if (answer.equalsIgnoreCase("higher") && ) {}
+        // generate second number
+        int secondNum = generateNum();
 
+        // game logic for higher choice
+        if (answer.equalsIgnoreCase("higher")) {
+            if (secondNum > firstNum){
+                System.out.println("correct");
+            }
+            else if (firstNum > secondNum) {
+                System.out.println("incorrect");
+            }
+            else {
+                System.out.println("both numbers were equal");
+            }
+        }
+
+        // game logic for higher choice
+        else if (answer.equalsIgnoreCase("lower")) {
+            if (secondNum > firstNum){
+                System.out.println("incorrect");
+            }
+            else if (firstNum > secondNum) {
+                System.out.println("correct");
+            }
+            else {
+                System.out.println("both numbers were equal");
+            }
+        }
+
+        // game end, close out program
+        System.out.println("Thanks for playing!");
         scanner.close();
     }
 
