@@ -27,26 +27,26 @@ public class HigherLower{
         // game logic for higher choice
         if (answer.equalsIgnoreCase("higher")) {
             if (secondNum > firstNum){
-                System.out.println("correct");
+                System.out.println("Second number is " + secondNum + " so you are correct");
             }
             else if (firstNum > secondNum) {
-                System.out.println("incorrect");
+                System.out.println("Second number is " + secondNum + " so you are incorrect");
             }
             else {
-                System.out.println("both numbers were equal");
+                System.out.println("Second number is " + secondNum + " so you tied");
             }
         }
 
         // game logic for higher choice
         else if (answer.equalsIgnoreCase("lower")) {
             if (secondNum > firstNum){
-                System.out.println("incorrect");
+                System.out.println("Second number is " + secondNum + " so you are incorrect");
             }
             else if (firstNum > secondNum) {
-                System.out.println("correct");
+                System.out.println("Second number is " + secondNum + " so you are correct");
             }
             else {
-                System.out.println("both numbers were equal");
+                System.out.println("Second number is " + secondNum + " so you tied");
             }
         }
 
@@ -60,6 +60,6 @@ public class HigherLower{
      * @return generated integer
      */
     private static int generateNum() {
-        return 0;
+        return (int) (Math.random() * 20) +1;
     }
 }
