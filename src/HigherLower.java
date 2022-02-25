@@ -1,4 +1,6 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class HigherLower{
 
@@ -6,16 +8,16 @@ public class HigherLower{
      *
      * @param args none
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // generate necessary variables
-        Scanner scanner = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String answer = "";
         int firstNum = generateNum();
 
         // get user input for answer
         System.out.println("Number is " + firstNum + ", will the next number be higher or lower? (numbers range from 1-20):");
         while (!answer.equalsIgnoreCase("higher") && !answer.equalsIgnoreCase("lower")) {
-            answer = scanner.next();
+            answer = br.readLine();
             if (!answer.equalsIgnoreCase("higher") && !answer.equalsIgnoreCase("lower")) {
                 System.out.println("invalid response, try again");
             }
@@ -52,7 +54,7 @@ public class HigherLower{
 
         // game end, close out program
         System.out.println("Thanks for playing!");
-        scanner.close();
+        br.close();
     }
 
     /**
